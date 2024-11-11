@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
+function Counter({ title, content }) {
+    // console.log(props.title);
+
+    return (
+        <div>
+            <h1>{title}</h1>
+            <p>{content}</p>
+            <button>+</button>
+        </div>
+    );
+}
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Counter title="레이겐 아라타카 기자회견" content="레이겐 이 사기꾼" />
+        </div>
+    );
 }
 
 export default App;
