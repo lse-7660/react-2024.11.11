@@ -1,21 +1,26 @@
 import './App.css';
+import React, { useState } from 'react';
 
-function Counter({ title, content }) {
-    // console.log(props.title);
-
+function Counter(props) {
     return (
         <div>
-            <h1>{title}</h1>
-            <p>{content}</p>
-            <button>+</button>
+            <h1>{props.title}</h1>
+            <button>눌러주시오</button>
+            {props.initValue}
         </div>
     );
 }
 
+// export default Counter;
+// 한 페이지에서는 하나의 function만 export 가능한가?
+
 function App() {
     return (
         <div>
-            <Counter title="레이겐 아라타카 기자회견" content="레이겐 이 사기꾼" />
+            <Counter
+                title="리액트가 개갓을때마다 누르는 버튼"
+                initValue={0}
+            />
         </div>
     );
 }
